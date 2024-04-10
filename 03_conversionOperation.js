@@ -21,3 +21,11 @@ let str="";
 let bolStr=Boolean(str);
 console.log(typeof bolStr); //boolean
 console.log(bolStr);  //""=>false ."hhh" true
+
+
+//string 
+console.log("1"+5);
+console.log("1"+5+6);
+console.log(5+6+"7");
+
+console.log(5+6-6/2-7%2*2);
