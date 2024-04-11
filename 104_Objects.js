@@ -28,7 +28,7 @@ let ob2={3:"tt",4:"uu"};
 let ob3={ob1,ob2};
 console.log(ob3);
 
-let ob4={...ob1,...ob2};  //de-structuring   (...)spread operator
+let ob4={...ob1,...ob2};  //  (...)spread operator
 console.log(ob4);
 
                                          //Imp
