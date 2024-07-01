@@ -1,4 +1,5 @@
 const express = require('express');
+const Food=require('../Models/Food');
 
 const router = express.Router();
 
@@ -38,5 +39,22 @@ const foodList = [
 router.get('/foods', (req, res) => {
     res.json(foodList);
 });
+
+router.post('/Food',async (req,res)=>
+{
+  console.log('Entry in create food');
+  const { name, price, desc, imageUrl} = req.body;
+
+  const food = new Food({ name, price, desc, imageUrl });
+  await food.save();
+//   const food = await Food.create({ name, price, desc, imageUrl })
+//   console.log(food);
+
+  res.json({
+    message: "Food Created successfully",
+    foodId: food._id
+  })
+
+})
 
 module.exports = router;

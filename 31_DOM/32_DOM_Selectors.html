@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h1>
+        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h1>
+        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h1>
+
+        <input type="password" name="pass" id="pass">
+        <input type="text" name="pass" id="pass">
+
+        <ul>
+            <li class="list-item">Green</li>
+            <li class="list-item">yellow</li>
+            <li class="list-item">red</li>
+        </ul>
+
+
+        <script >
+            //node list  :- its behave like an array but not an array
+          const liList=document.querySelectorAll("li");
+          console.log(liList);
+          liList[0].style.color="green";
+
+         console.log(document.querySelector('h1'));
+         console.log(document.querySelectorAll('h1'));
+         console.log("hii");
+
+         //html collection  :- ye bhi node list ke aise kam nahi karta
+          const listItem=document.getElementsByClassName("list-item");
+          console.log(listItem);
+          const convertedlistItem=Array.from(listItem);  //can convert htmlcollection to an array like this
+          convertedlistItem.forEach((x)=>
+        {
+            console.log(x);
+            x.style.color="red"
+            x.style.backgroundColor="green"
+            x.innerText="RED"
+        })
+
+
+        </script>
+    </body>
+</html>

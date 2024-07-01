@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+        <li>Python</li>
+    </ul>
+
+    <script>
+
+         function addLanguage(langName)
+         {
+            const li=document.createElement("li");
+            li.innerHTML=`${langName}`;        //it is traversing full node list
+            document.querySelector('.language').appendChild(li);
+         }
+         addLanguage("Reby");
+         addLanguage("TypeScript");
+
+         function addLanguageOptimise(langName)
+         {
+            const li=document.createElement("li");
+            li.appendChild(document.createTextNode(langName));  //here ust appenting child at last
+            document.querySelector('.language').appendChild(li);
+         }
+         addLanguageOptimise("Reby");
+         addLanguageOptimise("TypeScript");
+
+         //Edit Element
+         const secondLang=document.querySelector("li:nth-child(2)");
+         const newLi=document.createElement("li");
+         newLi.textContent="mongo";
+         secondLang.replaceWith(newLi);
+
+         const firstLang=document.querySelector("li:first-child");
+         firstLang.outerHTML='<li>TypeScript</li>';
+
+         //Delete Element
+         const secondLang2=document.querySelector("li:last-child");
+         secondLang2.remove();
+
+
+    </script>
+</body>
+</html>
