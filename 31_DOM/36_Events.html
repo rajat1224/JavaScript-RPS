@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+
+<script>
+
+    //attachEvent()  uses on internet explorer in past
+    //jquery  onEventListener().............................
+
+    //Need to learn
+     /* type,timestamp,defaultPrevented
+        target,toElement,srcElement,currentTarget
+        clientX,clientY,screenX,screenY
+        altKey,ctrlKey,shiftKey,keyCode 
+        
+       IMP:- Event Propagation :- two context 1.event bubbling 2.event capturing
+         
+        
+     */
+    //  document.getElementById('images').addEventListener('click',(e)=>
+    //      {
+    //            //alert('Clicked on River');
+    //            console.log("clicked inside the ul");
+    //      },false);
+
+    //      document.getElementById('river').addEventListener('click',(e)=>
+    //      {
+    //            //alert('Clicked on River');
+    //            console.log("river clicked");
+    //            e.stopPropagation();
+    //      },false);
+
+    //      document.getElementById('google').addEventListener('click',(e)=>
+    //      {
+    //         e.preventDefault();
+    //         e.stopPropagation();
+    //         console.log("google clicked");
+    //      },false)
+
+         document.querySelector('#images').addEventListener('click',(e)=>
+         {
+             console.log(e.target.parentNode);
+             //e.target.parentNode.remove();
+             //e.target.parentNode.removeChild(e.target.parentNode)
+         },false)
+</script>
+</html>
