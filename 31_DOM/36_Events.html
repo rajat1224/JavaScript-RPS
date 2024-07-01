@@ -55,6 +55,13 @@
          document.querySelector('#images').addEventListener('click',(e)=>
          {
              console.log(e.target.parentNode);
+             console.log(e.target.tagName);
+             console.log(e.target.id);
+             if(e.target.id==="river")
+             {
+                let removeit=e.target.parentNode;
+                removeit.remove();
+             }
              //e.target.parentNode.remove();
              //e.target.parentNode.removeChild(e.target.parentNode)
          },false)
