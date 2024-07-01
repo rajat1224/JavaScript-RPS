@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1>BMI Calculator</h1></center>
+    <center>
+    <form>
+     
+     <label>Height in Cm:</label><input type="number" id="height" /><br>
+     <label>weight in Cm:</label><input type="number" id="weight" /><br>
+     <button>Calculate</button><br>
+    </form> 
+     <div id="result">
+          
+     </div>
+     <div id="weight-guide">
+        <h3>BMI Weight guide</h3>
+        <p>Under weight =less then 18.6</p>
+        <p>Normal weight =18.6 and 24.9</p>
+        <p>OverWeight =Greater than 24.9</p>
+     </div>
+    </center>
+
+    <script>
+
+
+const form=document.querySelector('form');
+console.log(form);
+
+form.addEventListener('submit',(e)=>
+{
+    e.preventDefault();
+    console.log(e);
+    const height=parseInt(document.querySelector('#height').value);
+    const weight=parseInt(document.querySelector('#weight').value);
+    const result=document.querySelector('#result');
+
+    if(height <0)
+    {
+         result.innerHTML="please give a valid height!"
+    }
+    else if(weight<0)
+    {
+        result.innerHTML="please give a valid weight!"
+    }else{
+       result.innerHTML='result is: '+ (weight/((height*height)/10000).toFixed(2));
+    }
+
+})
+
+    </script>
+</body>
+</html>
