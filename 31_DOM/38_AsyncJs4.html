@@ -7,43 +7,39 @@
 </head>
 <body>
     <h1>Async await js</h1>
+<div class="divmain">
 
-    <button id="start">start</button>
-    <button id="stop">stop</button>
+</div>
+
 </body>
 <script>
 
-const randomColor=()=>{
-    const hex="0123456789ABCDEF";
-    let color="#";
-    for(let i=0;i<6;i++)
-    {
-        color +=hex[Math.floor(Math.random()*16)];
-    }
-    return color;
-}
+const insert=document.querySelector("div");
 
-let fun=function(txt){
-    console.log(txt +" "+Date.now());
-}
+window.addEventListener('keydown',(e)=>
+{
+    insert.innerHTML=`
+    <div class='color'>
+    <table>
+        <tr>
+            <th>Key</th>
+            <th>keyCode</th>
+            <th>Code</th>
+        </tr>
 
-let interval=undefined;
-const StartChangingColor=()=>{
+        <tr>
+            <td>${e.key}</td>
+            <td>${e.keyCode}</td>
+            <td>${e.code}</td>
+            
+        </tr>
 
-    interval= setInterval(()=>
-    {
-         document.body.style.backgroundColor=randomColor();
-    },2000);
-}
-
-const StopChangingColor=()=>{
-    clearInterval(interval);
-    interval=null;
-}
-
-document.querySelector("#start").addEventListener('click',StartChangingColor);
-document.querySelector("#stop").addEventListener('click',StopChangingColor)
-
+        </table>
+    </div>
+    
+    
+    `;
+})
 
 
 </script>
