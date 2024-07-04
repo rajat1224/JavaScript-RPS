@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Oops in js</h1>
+    <h3>Js is primarity a prototype-based language.</h3><br>
+
+    <p>  //toLowerCase
+        <br>
+        //parts of oop<br>
+        //1.object literal<br>
+        /*
+          constructor function<br>
+          prototypes<br>
+          classes<br>
+          instances (new,this)<br>
+        */
+       /*
+       abstraction<br>
+       encapsulation<br>
+       inheritance<br>
+       polymorphism<br>
+       
+       */</p>
+</body>
+<script>
+  //object :- collection of properties and methods.
+  //toLowerCase
+  
+  //parts of oop
+  //1.object literal
+  /*
+    constructor function
+    prototypes
+    classes
+    instances (new,this)
+  */
+ /*
+ abstraction
+ encapsulation
+ inheritance
+ polymorphism
+ 
+ */
+
+ //object literal
+ const user={
+    username:"rajat",
+    age:55,
+
+    getUserDTL:function(){
+       console.log(`got details :- name is `+this.username+` and age is  ${this.age}`);
+       return "hii "+this.username;
+    }
+ }
+
+ console.log(user.age);
+ console.log(user.getUserDTL());
+ console.log(user);
+
+                //constructor functions
+    //const promiseOne=new Promise();
+    //const date=new Date();
+    
+    function User(name,age,flag)
+    {
+        this.name=name;
+        this.age=age;
+        this.flag=flag;
+
+       // return this;
+    }
+
+    const one=new User("ram",22,true);
+    const two=new User("ram",22,true);
+    const three=new User("ram",22,true);
+
+    console.log(one);
+    console.log(one);
+    console.log(three);
+
+    function UserConstruct()
+    {
+      
+    }
+
+    const con=new UserConstruct();
+
+    console.log(con.constructor);
+
+</script>
+</html>
