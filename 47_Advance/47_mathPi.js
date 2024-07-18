@@ -27,7 +27,7 @@ Object.defineProperty(chai,'name',{
     writable:false,
     enumerable:false,
     
-})
+});
 
 console.log(Object.getOwnPropertyDescriptor(chai,'name'));
 chai.name="Rajat New" //now you cant change it bcs it is now not writable
